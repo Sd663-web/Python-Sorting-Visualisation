@@ -7,9 +7,9 @@ import threading
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
-# -------------------------------------------------
+
 # Utility Functions
-# -------------------------------------------------
+
 
 def draw_bars(data, color_array, ax, canvas):
     ax.clear()
@@ -17,9 +17,9 @@ def draw_bars(data, color_array, ax, canvas):
     ax.set_title("Sorting Visualization")
     canvas.draw()
 
-# -------------------------------------------------
+
 # Sorting Algorithms (Generators for animation)
-# -------------------------------------------------
+
 
 def bubble_sort(data):
     n = len(data)
@@ -96,9 +96,9 @@ def partition(data, low, high):
     yield data, ["green" if x == i + 1 else "blue" for x in range(len(data))]
     return i + 1, data
 
-# -------------------------------------------------
+
 # Tkinter GUI Framework
-# -------------------------------------------------
+
 
 class SortingVisualizer:
     def __init__(self, root):
@@ -174,9 +174,9 @@ class SortingVisualizer:
 
         threading.Thread(target=run_sort).start()
 
-# -------------------------------------------------
+
 # Run Application
-# -------------------------------------------------
+
 
 root = tk.Tk()
 SortingVisualizer(root)
